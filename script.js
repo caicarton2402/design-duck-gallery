@@ -6,7 +6,13 @@ const captionText = document.getElementById('caption');
 const detailLink = document.getElementById('detail-link');
 const closeBtn = document.querySelector('.close');
 
+const toggleMemoBtn = document.getElementById('toggle-memo');
+const memoBox = document.getElementById('memo-box');
+const memoInput = document.getElementById('memo-input');
+const saveMemoBtn = document.getElementById('save-memo');
+
 let allData = [];
+let currentProductId = null;
 
 // Load data
 fetch('data.json')
@@ -17,74 +23,66 @@ fetch('data.json')
         renderGallery('all');
     });
 
-// Generate filter buttons
 function renderFilterButtons() {
-    allData.forEach(item => {
+    const categories = ['all', ...new Set(allData.map(item => item.category))];
+    filterNav.innerHTML = '';
+    
+    categories.forEach(cat => {
         const btn = document.createElement('button');
         btn.classList.add('filter-btn');
-        btn.dataset.category = item.category;
-        btn.textContent = item.category;
-        btn.addEventListener('click', (e) => {
+        if(cat === 'all') btn.classList.add('active');
+        btn.dataset.category = cat;
+        btn.textContent = cat === 'all' ? '全部' : cat;
+        
+        btn.addEventListener('click', () => {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            renderGallery(e.target.dataset.category);
+            renderGallery(cat);
         });
         filterNav.appendChild(btn);
     });
-
-    const allBtn = document.querySelector('[data-category="all"]');
-    allBtn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        allBtn.classList.add('active');
-        renderGallery('all');
-    });
 }
 
-// Render gallery
 function renderGallery(category) {
     gallery.innerHTML = '';
-    let filteredProducts = [];
-    
-    if (category === 'all') {
-        allData.forEach(cat => {
-            cat.products.forEach(p => filteredProducts.push({...p, category: cat.category}));
-        });
-    } else {
-        const catData = allData.find(c => c.category === category);
-        if (catData) {
-            catData.products.forEach(p => filteredProducts.push({...p, category: catData.category}));
-        }
-    }
+    const filtered = category === 'all' ? allData : allData.filter(item => item.category === category);
 
-    filteredProducts.forEach(product => {
+    filtered.forEach((product, index) => {
         const item = document.createElement('div');
         item.classList.add('gallery-item');
         item.innerHTML = `
-            <img src="${product.image_url}" alt="${product.title}" loading="lazy">
+            <img src="${product.imageUrl}" alt="${product.title}" loading="lazy">
             <div class="info">
                 <h3>${product.title}</h3>
-                <p style="font-size: 12px; color: #777;">${product.category}</p>
+                <p>${product.category}</p>
             </div>
         `;
-        item.addEventListener('click', () => openModal(product));
+        item.addEventListener('click', () => openModal(product, `${category}-${index}`));
         gallery.appendChild(item);
     });
 }
 
-// Modal logic
-function openModal(product) {
+function openModal(product, id) {
+    currentProductId = id;
     modal.style.display = "block";
-    modalImg.src = product.image_url;
+    modalImg.src = product.imageUrl;
     captionText.innerHTML = product.title;
-    detailLink.href = product.detail_url;
+    detailLink.href = product.detailUrl;
+    
+    // Load memo from localStorage
+    const savedMemo = localStorage.getItem(`memo-${id}`) || '';
+    memoInput.value = savedMemo;
+    memoBox.classList.remove('active');
 }
 
-closeBtn.onclick = function() {
-    modal.style.display = "none";
-}
+toggleMemoBtn.addEventListener('click', () => {
+    memoBox.classList.toggle('active');
+});
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+saveMemoBtn.addEventListener('click', () => {
+    localStorage.setItem(`memo-${currentProductId}`, memoInput.value);
+    memoBox.classList.remove('active');
+});
+
+closeBtn.onclick = () => modal.style.display = "none";
+window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }

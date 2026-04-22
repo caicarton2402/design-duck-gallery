@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>设计师大牌家具展示 - 瀑布流</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -24,9 +25,20 @@
     <!-- 详情模态框 -->
     <div id="modal" class="modal">
         <span class="close">&times;</span>
-        <img class="modal-content" id="modal-img">
-        <div id="caption"></div>
-        <a id="detail-link" href="#" target="_blank">查看原网页详情</a>
+        <div class="modal-content-container">
+            <img class="modal-content" id="modal-img">
+            <div class="modal-side-panel">
+                <div id="caption"></div>
+                <div class="memo-section">
+                    <button id="toggle-memo" class="action-btn"><i class="fas fa-sticky-note"></i> 设计便签 (点我展开)</button>
+                    <div id="memo-box" class="memo-box">
+                        <textarea id="memo-input" placeholder="输入设计灵感或笔记..."></textarea>
+                        <button id="save-memo" class="action-btn secondary">点完收起来</button>
+                    </div>
+                </div>
+                <a id="detail-link" href="#" target="_blank" class="primary-link">查看原网页详情</a>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
