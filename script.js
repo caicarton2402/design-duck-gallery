@@ -1,5 +1,9 @@
 const gallery = document.getElementById('gallery');
-const filterNav = document.getElementById('category-filter');
+const filterDrawer = document.getElementById('category-filter');
+const filterButtonsContainer = document.getElementById('filter-buttons-container');
+const menuToggle = document.getElementById('menu-toggle');
+const closeDrawer = document.getElementById('close-drawer');
+
 const modal = document.getElementById('modal');
 const modalImg = document.getElementById('modal-img');
 const captionText = document.getElementById('caption');
@@ -23,9 +27,18 @@ fetch('data.json')
         renderGallery('all');
     });
 
+// Drawer Toggle Logic
+menuToggle.addEventListener('click', () => {
+    filterDrawer.classList.add('active');
+});
+
+closeDrawer.addEventListener('click', () => {
+    filterDrawer.classList.remove('active');
+});
+
 function renderFilterButtons() {
     const categories = ['all', ...new Set(allData.map(item => item.category))];
-    filterNav.innerHTML = '';
+    filterButtonsContainer.innerHTML = '';
     
     categories.forEach(cat => {
         const btn = document.createElement('button');
@@ -38,8 +51,10 @@ function renderFilterButtons() {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             renderGallery(cat);
+            // Auto-close drawer on selection
+            filterDrawer.classList.remove('active');
         });
-        filterNav.appendChild(btn);
+        filterButtonsContainer.appendChild(btn);
     });
 }
 
@@ -60,6 +75,8 @@ function renderGallery(category) {
         item.addEventListener('click', () => openModal(product, `${category}-${index}`));
         gallery.appendChild(item);
     });
+    // Scroll to top when changing category
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function openModal(product, id) {
@@ -85,4 +102,7 @@ saveMemoBtn.addEventListener('click', () => {
 });
 
 closeBtn.onclick = () => modal.style.display = "none";
-window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
+window.onclick = (e) => { 
+    if (e.target == modal) modal.style.display = "none";
+    if (e.target == filterDrawer) filterDrawer.classList.remove('active'); // Close drawer if clicking outside
+}
