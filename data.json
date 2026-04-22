@@ -1,0 +1,152 @@
+[
+  {
+    "category": "健身器材",
+    "products": [
+      {
+        "title": "FRAME-J08 折叠训练凳",
+        "image_url": "https://image.designduck-dd.com/20260325/1d5a215a56f934436e81fd9a65023886.png",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-17362.html"
+      },
+      {
+        "title": "FRAME-J04 哑铃架",
+        "image_url": "https://image.designduck-dd.com/20260326/89d5a0d2d13bdc09a68ace89a434facb.png",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-17364.html"
+      },
+      {
+        "title": "SELUNE-Q01 哑铃架",
+        "image_url": "https://image.designduck-dd.com/20260326/f27c376a12a93f2cbe436f6e9108a15d.png",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-17366.html"
+      },
+      {
+        "title": "DELVAR-Z01 双层哑铃架",
+        "image_url": "https://image.designduck-dd.com/20260326/81ab8df0980ca05fcee50a762bd8670b.png",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-17363.html"
+      },
+      {
+        "title": "FRAME-J03 哑铃架",
+        "image_url": "https://image.designduck-dd.com/20260326/89ab8df0980ca05fcee50a762bd8670b.png",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-17409.html"
+      }
+    ]
+  },
+  {
+    "category": "麻将桌",
+    "products": [
+      {
+        "title": "impatia",
+        "image_url": "https://image.designduck-dd.com/20230602/59ff540759154813160cc6e42a6cc541.jpg",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-1091.html"
+      },
+      {
+        "title": "impatia",
+        "image_url": "https://image.designduck-dd.com/20230612/996da8618170568738a9290879b98881.jpg",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-1080.html"
+      },
+      {
+        "title": "方圆手动",
+        "image_url": "https://image.designduck-dd.com/20231229/9fc17e6d1df137b5d63c765dbfb253b4.png",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-12153.html"
+      },
+      {
+        "title": "多体面",
+        "image_url": "https://image.designduck-dd.com/20231229/89c55da68f7ca751b7a1fd1b431d86a7.png",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-12151.html"
+      },
+      {
+        "title": "方圆",
+        "image_url": "https://image.designduck-dd.com/20231229/6cdec9b65c854bc343097cb714ddfb58.png",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-12152.html"
+      }
+    ]
+  },
+  {
+    "category": "台球桌",
+    "products": [
+      {
+        "title": "impatia",
+        "image_url": "https://image.designduck-dd.com/20230602/04e01cc673387f8e5706e4be71cc9414.jpg",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-2992.html"
+      },
+      {
+        "title": "teckell",
+        "image_url": "https://image.designduck-dd.com/20230612/ed3df65478fd74ed3b6b2323678af86b.jpg",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-2998.html"
+      },
+      {
+        "title": "Off Piste 8 feet American pool table",
+        "image_url": "https://image.designduck-dd.com/20251114/c12845afd2a8a976254d77674276800a.png",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-17831.html"
+      }
+    ]
+  },
+  {
+    "category": "扑克桌",
+    "products": [
+      {
+        "title": "impatia",
+        "image_url": "https://image.designduck-dd.com/20230602/0fd8c69ef49f7370fb99b30b26762848.png",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-2988.html"
+      },
+      {
+        "title": "impatia",
+        "image_url": "https://image.designduck-dd.com/20230612/ed74b194736369682531e111d1977ade.jpg",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-2995.html"
+      },
+      {
+        "title": "viamara",
+        "image_url": "https://image.designduck-dd.com/20230612/eddaa9b6ce23b328fe8ea551d4787935.jpg",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-2999.html"
+      },
+      {
+        "title": "viamara",
+        "image_url": "https://image.designduck-dd.com/20230612/6c83921375203684be5b94714b5b9903.jpg",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-3001.html"
+      },
+      {
+        "title": "viamara",
+        "image_url": "https://image.designduck-dd.com/20230612/9a21d985deaa0e32fed59c42b268cb10.jpg",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-3005.html"
+      }
+    ]
+  },
+  {
+    "category": "足球机",
+    "products": [
+      {
+        "title": "TK玻璃足球机",
+        "image_url": "https://image.designduck-dd.com/20241018/52b0bdc64fda08313c126d4a800cc27e.png",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-12148.html"
+      },
+      {
+        "title": "TK轻奢足球机",
+        "image_url": "https://image.designduck-dd.com/20241018/4fccffd494b19007df4753beec619364.png",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-12150.html"
+      },
+      {
+        "title": "足球机",
+        "image_url": "https://image.designduck-dd.com/20230602/3f3e3d86ab77e7a3a9eaef5eee0d68b0.jpg",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-3017.html"
+      }
+    ]
+  },
+  {
+    "category": "乒乓球桌",
+    "products": [
+      {
+        "title": "碳元素乒乓桌",
+        "image_url": "https://image.designduck-dd.com/20231229/5a33ce074dfdab2d5ed2049e9fab1989.jpg",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-12154.html"
+      },
+      {
+        "title": "impatia",
+        "image_url": "https://image.designduck-dd.com/20230602/5d864aa3ee263b88ced182e3b9eb6c26.jpg",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-2990.html"
+      },
+      {
+        "title": "原创无限乒乓球桌",
+        "image_url": "https://image.designduck-dd.com/20230831/c80d95be05c1469a4f78957f3e8d80f2.jpg",
+        "detail_url": "https://www.designduck-dd.com/index-product-detail-id-3015.html"
+      }
+    ]
+  }
+]
